@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Corrigido: Poppins */
+}
+
+:root {
+    --primary-color: #ffd700;
+    --secondary-color: #1a1a1a;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --bg-light: #f4f4f4;
+    --transition: 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.wga-image {
+    width: 300px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Top Bar --- */
+.top-bar {
+    background-color: var(--secondary-color); /* Corrigido: secondary */
+    color: var(--text-light);
+    padding: 10px 0;
+    font-size: 0.85rem; /* Corrigido: rem */
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.top-bar p i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Nav Principal --- */
+nav {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-content {
+    height: 80px;
+    margin-top: 17px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Adicionei a classe .phone-link para garantir que o texto também mude */
+.phone-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.phone-link i {
+    color: #25d366;
+    font-size: 1.2rem;
+}
+
+.phone-link:hover {
+    color: var(--primary-color);
+}
+
+/* --- Botão de Orçamento --- */
+.btn-budget {
+    background-color: var(--secondary-color); /* Corrigido: secondary */
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border: 2px solid var(--secondary-color);
+    transition: var(--transition);
+}
+
+.btn-budget:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px); /* Corrigido: px */
+}
+
+main {
+    min-height: 60vh;
+}
