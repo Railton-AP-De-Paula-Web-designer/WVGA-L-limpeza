@@ -121,3 +121,13 @@ nav {
 main {
     min-height: 60vh;
 }
+
+.hero{
+    background-image: linear-gradient(rgba(0, 0, 0,0.5), rgba(0, 0, 0, 0.5)), url('./assets/grama.png.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
