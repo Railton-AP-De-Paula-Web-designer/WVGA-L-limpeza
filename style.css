@@ -282,3 +282,64 @@ main {
     color: var(--secondary-color);
     letter-spacing: 1px;
 }
+
+.squarematrix {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.matrix-brand-header {
+    background-color: #1a1a1a;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 60px 0;
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 1px solid rgba(255, 255, 255,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.matrix-brand-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.matrix-brand-header .brand-wrapper {
+    margin-bottom: 15px;
+}
+
+.wl-text-matrix {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    position: relative;
+    line-height: 1;
+}
+
+.leaf-icon-vetorial::after {
+    content: '';
+    position: absolute;
+    top: -10px; /* Ajustado para subir um pouco mais */
+    right: -15px; /* Ajustado para a direita da letra L */
+    width: 22px;
+    height: 32px;
+    background: linear-gradient(135deg, #a4f323 0%, #3a7a01 100%);
+    border-radius: 0 100% 0 100%;
+    transform: rotate(25deg);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0 ,0.4);
+    z-index: 1;
+}
+.matrix-title {
+    font-size: 2.2rem;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.matrix-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    line-height: 1.5;
+}
+.img-planta {
+    width: 200px;
+}
