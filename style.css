@@ -451,5 +451,133 @@ main {
     right: -10px;
     transform: translateY(-50px) rotate(90deg);
 }
+/* ============================================================
+   SEÇÃO SQUAREMATRIX: ÚLTIMAS ATUALIZAÇÕES
+   Engenharia de Layout: Foto Inteira com Texto Sobreposto
+============================================================ */
 
+.matrix-updates {
+    display: block !important;
+    margin-top: 50px;
+    padding-bottom: 80px;
+}
+
+.updates-header {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 50px;
+}
+
+.updates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 30px;
+}
+
+/* --- Card Base (Configurado para Foto de Fundo) --- */
+.update-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    background-color: #1a1a1a;
+}
+
+.update-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Imagem Ocupando o Card Inteiro --- */
+.card-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.update-card:hover .card-image-wrapper img {
+    transform: scale(1.1);
+}
+
+/* --- Camada de Proteção para Leitura (Gradiente) --- */
+.update-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%);
+    z-index: 2;
+}
+
+/* --- Conteúdo do Card (Texto sobre a Imagem) --- */
+.card-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Texto sempre na parte de baixo */
+    color: #ffffff; /* Letras Brancas */
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: justify;
+    margin: 0;
+}
+
+/* --- REGRAS ESPECÍFICAS --- */
+
+/* CARD LARGO (Letras Maiores) */
+.card-w2 {
+    grid-column: span 2;
+}
+
+.card-w2 h3 {
+    font-size: 1.6rem !important; /* Destaque nas letras grandes conforme pedido */
+}
+
+/* CARD ALTO */
+.card-h2 {
+    grid-row: span 2;
+}
+
+/* Ajuste do Ícone de Folha */
+.leaf-icon::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 18px;
+    background: linear-gradient(135deg, #a4f323 0%, #3a7a01 100%);
+    border-radius: 0 100% 0 100%;
+    transform: rotate(15deg);
+    margin-bottom: 8px;
+}
 
