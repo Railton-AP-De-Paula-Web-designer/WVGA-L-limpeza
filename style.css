@@ -662,3 +662,50 @@ main {
     letter-spacing: 0.5px !important;
     
 }
+
+
+.nav-institucional {
+    width: 100%;
+    padding: 25px 0;
+    position: relative;
+    z-index: 10;
+}
+.main-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+.main-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'fredericka the great', cursive !important;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: all 0.1s ease;
+    letter-spacing: 1.5px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);*/
+
+    
+}
+.main-links li a:hover {
+    color: #ffd700;
+    border-bottom: 3px solid rgba(255, 215, 0, 0.6);
+
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.9),
+    0 0 20px rgba(255, 215, 0, 0.7),
+    0 0 35px rgba(255, 215, 0, 0.5),
+    0 0 50px rgba(255, 215, 0, 0.3); 
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.hero-content {
+    margin-top: 20px;
+}
