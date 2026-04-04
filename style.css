@@ -716,7 +716,7 @@ main {
     text-align: center;
     border-top: 4px solid #fdd700;
     color: #ffffff;
-  font-family: 'Rubik Moonrocks', system-ui !important;
+
 }
 
 .tag-aviso {
@@ -797,12 +797,17 @@ main {
     transition: filter 0.3s ease;
 }
 
-.card-ameca span {
-    color: #ffffff !important; /* Branco para destacar no fundo escuro */
-    font-weight: normal;
-    font-size: 22px; /* Aumentado para a textura da pedra aparecer */
+.card-ameaca span {
+    /* O ERRO: estava 'rubik moonrocks' em minúsculas. O correto é com iniciais MAIÚSCULAS */
+    font-family: 'Rubik Moonrocks', system-ui !important;
+    
+    color: #d31212 !important;
+    font-size: 26px; /* Aumentado um pouco para destacar a textura de pedra */
+    text-transform: uppercase;
     letter-spacing: 2px;
-    font-family: 'Rubik Moonrocks', system-ui !important; /* A fonte que você queria */
     margin-top: 15px;
     display: block;
+    
+    /* Sombra para dar profundidade às pedras */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
 }
