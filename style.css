@@ -811,3 +811,7 @@ main {
     /* Sombra para dar profundidade às pedras */
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
 }
+
+.imgperigo {
+    width: 300px;
+}
