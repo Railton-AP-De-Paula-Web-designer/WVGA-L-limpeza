@@ -1064,3 +1064,42 @@ main {
     color: rgba(212, 175, 55, 0.1);
     pointer-events: none;
 }
+
+.marcadagua{
+    display: inline-block;
+    padding: 20px 60px;
+    margin: 100px auto;
+    text-align: center;
+    position: relative;
+    /*tipografia*/
+    font-family: 'poppins', sans-serif !important;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    /*cor do texto*/
+    color: rgba(#d4af37);
+    text-shadow: 0 010px rgba(212, 175, 55, 0.8),
+    0 0 20px rgba(212, 175, 55, 0.3);
+    /*efeitovidro*/
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /*acabamento*/
+    border-radius: 20px;
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    /*auradourada*/
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2),
+    inset 0 0 15px rgba(212, 175, 55, 0.1);
+    /*refinamento*/
+    user-select: none;
+    pointer-events: none;
+   transition: all 0.4s ease;
+}
+ .marcadagua-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+ }
