@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -1478,4 +1482,7 @@ main {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
 }
+
+
+
 
