@@ -1483,6 +1483,23 @@ main {
     }
 }
 
+.header-main h2 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-main span {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.social-icons a i:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+
 
 
 
