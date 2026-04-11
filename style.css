@@ -2018,81 +2018,105 @@ main {
        SEÇÃO: DETALHES DAS AMEAÇAS (Refatorado para Separação Máxima)
        ========================================================================== */
 
-    /* 1. Mantemos a estrutura do container pai limpa */
-    .detalhes-ameacas {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 40px !important;
-        padding: 0 20px !important; /* Respiro lateral */
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
+/* ==========================================================================
+   ANÁLISE TÉCNICA: RESOLUÇÃO DE CONFLITO LANDSCAPE
+   ========================================================================== */
 
-    /* 2. O Card individual (Flexbox Padronizado) */
+
+
+@media screen and (max-width: 932px) and (orientation: landscape) {
+
+    /* --- 1. ESTRUTURA MESTRE (O PADRÃO DO ESCORPIÃO MARROM) --- */
     .ameaca-info {
         display: flex !important;
-        flex-direction: row !important; /* Mantém lado a lado */
-        align-items: center !important; /* Alinhamento vertical central */
-        justify-content: space-between !important; /* Joga os elementos para as pontas */
-        width: 100% !important;
-        padding: 15px !important;
-        overflow: visible !important; /* Para não cortar o brilho */
-        position: relative !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        min-height: 220px !important; /* Altura ideal para o efeito 3D */
+        overflow: visible !important; /* Libera o bicho para vazar do card */
+        padding: 20px 30px !important;
+        gap: 15px !important;
     }
 
-    /* 3. Lado da Imagem (Escorpião na Esquerda) */
+    /* --- 2. PROTEÇÃO DA IMAGEM (ANTI-ESMAGAMENTO) --- */
     .ameaca-imagem {
-        width: 35% !important; /* Área fixa menor para o animal */
+        flex: 0 0 45% !important; /* RESERVA 45% fixos: o texto não aperta mais a foto */
+        position: relative !important;
         display: flex !important;
-        justify-content: flex-start !important; /* Mantém o escorpião na borda esquerda */
-        order: 1 !important; /* Força na esquerda */
-        margin: 0 !important;
-        position: static !important; /* Previne que absolute quebre o fluxo */
+        justify-content: center !important;
+        overflow: visible !important;
+        order: 2 !important; /* Imagem sempre na direita */
     }
 
     .imgperigo {
-        max-width: 140px !important; /* Tamanho proporcional controlado */
+        position: relative !important;
+        z-index: 20 !important;
+        display: block !important;
         height: auto !important;
-        object-fit: contain !important;
-        filter: drop-shadow(0px 0px 10px rgba(255, 204, 0, 0.5));
+        margin-right: 549px !important;
+        width: 300px !important;
     }
 
-    /* 4. Lado do Texto (Oposto à Imagem) */
+    /* --- 3. TRATAMENTO INDIVIDUALIZADO (POSIÇÃO POR POSIÇÃO) --- */
+
+    /* 1º Card: ABELHAS E VESPAS (Flor Amarela) */
+    .detalhes-ameacas .ameaca-info:nth-child(1) .imgperigo {
+        width: 175% !important; 
+        transform: translate(35px, -15px) scale(1.1) !important;
+    }
+
+    /* 2º Card: ABELHAS JATAÍ (Ninho) */
+    .detalhes-ameacas .ameaca-info:nth-child(2) .imgperigo {
+        width: 155% !important;
+        transform: translate(25px, -20px) scale(1.2) !important;
+    }
+
+    /* 3º Card: ABELHA ARAPUÁ */
+    .detalhes-ameacas .ameaca-info:nth-child(3) .imgperigo {
+        width: 165% !important;
+        transform: translate(30px, -10px) scale(1.15) !important;
+    }
+
+    /* 4º Card: COBRA VERDE / DORMIDEIRA */
+    .detalhes-ameacas .ameaca-info:nth-child(4) .imgperigo {
+        width: 195% !important; 
+        transform: translate(45px, 10px) scale(1.3) !important;
+    }
+
+    /* 5º Card: ESCORPIÃO MARROM (Referência de Sucesso) */
+    .detalhes-ameacas .ameaca-info:nth-child(5) .imgperigo {
+        width: 205% !important;
+        transform: translate(45px, 0px) scale(1.35) !important;
+    }
+
+    /* 6º Card: ESCORPIÃO PRETO */
+    .detalhes-ameacas .ameaca-info:nth-child(6) .imgperigo {
+        width: 215% !important;
+        transform: translate(40px, -5px) scale(1.4) !important;
+    }
+
+    /* 7º Card: COBRA JARARACA (Recuperando do sumiço) */
+    .detalhes-ameacas .ameaca-info:nth-child(7) .imgperigo {
+        width: 200% !important;
+        transform: translate(45px, 5px) scale(1.3) !important;
+    }
+
+    /* --- 4. AJUSTE DE TEXTO E BOTÃO --- */
     .ameaca-texto {
-        width: 60% !important; /* Área maior para o texto rodar */
-        order: 2 !important; /* Força na direita */
-        padding-left: 20px !important; /* Espaço entre o animal e o texto */
-        padding-right: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        
-        /* === ESTA É A MUDANÇA PRINCIPAL === */
-        align-items: flex-end !important; /* Alinha o bloco inteiro na direita do container */
-        text-align: right !important;     /* Alinha as linhas de texto individualmente na direita */
+        width: 48% !important; /* Mantém o texto no lugar dele */
+        order: 1 !important;
     }
 
-    /* 5. Ajustes de Tipografia e Títulos para Alinhamento à Direita */
-    .ameaca-texto h3 {
-        font-size: 1.35rem !important;
-        margin-bottom: 5px !important;
-        line-height: 1.2 !important;
-        width: 100% !important; /* Ocupa tudo para alinhar o texto */
-        
+    .btn-whatsapp {
+        transform: scale(0.85) !important; /* Botão discreto para não tampar o bicho */
+        bottom: 12px !important;
+        right: 18px !important;
+        z-index: 30 !important;
     }
 
-    .ameaca-texto h4 {
-        font-size: 0.9rem !important;
-        color: rgba(255, 255, 255, 0.6) !important;
-        width: 100% !important;
-    }
-
-    .ameaca-texto p {
-        font-size: 0.95rem !important;
-        line-height: 1.4 !important;
-        margin: 0 !important;
-        max-width: 90% !important; /* Impede que o texto "tripa" verticalmente */
-    }
 }
+}
+
 
 
 
