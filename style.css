@@ -1823,7 +1823,246 @@ main {
         font-size: 0.85rem;
     }
 
-} /* <--- ESSA CHAVE FECHA O @MEDIA E É OBRIGATÓRIA */
+} 
+
+@media screen and (max-width: 932px) and (orientation: landscape) {
+    .services .container {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        min-height: 100vh !important;
+        padding: 0 40px !important;
+    }
+
+    .folhas-image, .img-cuidado, .texto-verde-image {
+        position: static !important; /* Remove 'absolute' ou 'relative' que fixa em um lugar só */
+        margin: 0 !important;
+        left: auto !important;
+        top: auto !important;
+    }
+    .folhas-image {
+        width: 95% !important;
+        max-width: 335px !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+    .img-cuidado {
+        width: 60% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        order: 2;
+    }
+    .texto-verde-image {
+        width: 100% !important;
+        max-width: 550px !important;
+        height: auto !important;
+       
+    }
+    /* 1. Estrutura Base */
+    header { position: relative; }
+    .top-bar { display: none !important; }
+    
+    .container { max-width: 95% !important; padding: 0 15px !important; }
+
+    /* 2. Menu Institucional (Onde estava encoberto) */
+    .nav-institucional { padding: 5px 0 !important; }
+    .main-links {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+    .main-links li a { font-size: 11px !important; }
+
+    /* 3. Hero - Resolvendo o corte da frase verde */
+    .hero {
+     min-height: 100vh !important; /* Ocupa a altura total da tela */
+        height: auto !important;
+        display: flex !important;
+        flex-direction: row !important; /* Coloca uma imagem ao lado da outra */
+        justify-content: space-around !important; /* Cria um espaço no meio */
+        align-items: center !important; /* Centraliza verticalmente */
+        padding: 10px !important;
+        overflow: hidden !important; /* Impede que algo vaze para fora */
+    }
+     .hero-content{
+
+     
+  display: flex !important;
+        flex-direction: row !important; /* Texto ao lado da imagem */
+        width: 100% !important;
+        max-width: 95% !important; /* Evita que batam nas bordas */
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 30px !important; /* Espaço entre a folha e o texto verde */
+    }
+    
+
+    .hero-text {
+        flex: 1;
+        text-align: left !important;
+    }
+
+    .wl-text-matrix {
+        font-size: 1.6rem !important; /* Ajuste fino de escala */
+        line-height: 1.1 !important;
+        margin-bottom: 15px !important;
+        display: block !important; /* Garante que a frase apareça */
+    }
+
+    /* 4. Grids de Conteúdo */
+    .update-grid, .fale-grid, .footer-content-grid, .mural-ameacas {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 15px !important;
+    }
+
+    /* 5. Ameaças (Escorpiões) */
+    .ameaca-info { flex-direction: row !important; text-align: left !important; }
+    .ameaca-imagem { max-width: 120px !important; margin-right: 15px !important; top: 0 !important; }
+
+    /* 6. Footer e Assinatura */
+    .assinatura-lider-wrapper { flex-direction: row !important; align-items: center !important; }
+    .leader-photo-glow img { width: 120px !important; }
+
+    #sobre {
+        height: auto !important;
+        min-height: 100vh !important;
+        padding-bottom: 50px !important;
+    }
+
+    .updates-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+
+.container-momento-foto {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 350px !important;
+  display: block !important;
+  position: relative;
+  margin-top: 20px !important;
+  padding-bottom: 40px !important;  
+
+}
+.editorial-block.card-info-text {
+    height: auto !important;
+    padding: 20px !important;
+}
+
+.editorial-block p {
+    font-size: 2.1rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 10px !important;
+}
+
+.editorial-block h3 {
+    font-size: 2.6rem !important;
+    margin-bottom: 15px !important;
+}
+.familia-grid-image img {
+    max-width: 300px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+}
+
+.image-seguranca-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important; 
+}
+.mural-ameacas {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+    width: auto !important;
+}
+.card-ameaca {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.card-ameaca img.alerta-img {
+    width: 130px !important;
+    height: auto !important;
+    margin-bottom: 5px !important;
+}
+.card-ameaca span {
+    font-size: 1.4rem !important;
+    font-weight: 900 !important;
+    color: #ff0000 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block !important;
+    margin-top: 10px !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+/*arrumando comfrito*/
+/* 🔥 CORREÇÃO REAL DO BUG (ESCORPIÃO FORA DO LUGAR) */
+
+.ameaca-info {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    padding: 15px !important;
+    overflow: hidden !important;
+}
+
+.ameaca-imagem {
+    flex: 0 0 120px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    position: relative !important; /* 🔥 mata bug antigo */
+}
+
+.imgperigo {
+    width: 100% !important;
+    max-width: 120px !important;
+    height: auto !important;
+
+    position: relative !important; /* 🔥 REMOVE comportamento bugado */
+    top: 0 !important;
+    left: 0 !important;
+
+    margin: 0 auto !important;
+    object-fit: contain !important;
+}
+
+.ameaca-texto {
+    flex: 1 !important;
+    padding-left: 10px !important;
+}
+
+
+
+    .ameaca-imagem {
+        flex: 0 0 90px !important;
+    }
+
+    .imgperigo {
+        max-width: 90px !important;
+        height: auto !important;
+        object-fit: contain !important;
+
+        position: relative !important;
+        left: 0 !important;
+        transform: scale(1) !important;
+    }
+
+}
+
+
 
 
 
