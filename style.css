@@ -1815,13 +1815,55 @@ main {
     .footer-bg-glow { width: 100%; height: 200px; }
 
     .botao-zap {
-        bottom: 15px;
+        bottom: 70px;
         right: 15px;
+
+        
     }
     .botao-zap button {
         padding: 10px 20px;
         font-size: 0.85rem;
     }
+    .before-block, .after-block {
+        position: relative !important;
+        width: 100% !important;
+    }
+    .label-before {
+        position: absolute !important;
+        top: 20px !important;
+        left: 20px !important;
+        bottom: auto !important;
+        background-color: rgba(51,51, 51, 0.9) !important;
+
+
+    }
+    .label-after {
+        position: absolute !important;
+        bottom: 20px !important;
+        top: auto !important;
+        background-color: #ffde00 !important;
+        color: #000 !important;
+    }
+        .matrix-brand-header .container {
+            margin-right: 100px;
+        }
+
+        .social-icons {
+            margin-top: 25px
+        }
+
+.atuacao-faleconosco {
+    color: #fff;
+    margin-top: 25px;
+    margin-left: -18px;
+}
+
+.split-text-content p {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-right: 10px;
+}
 
 } 
 
@@ -2115,6 +2157,13 @@ main {
         right: 18px !important;
         z-index: 30 !important;
     }
+
+    .split-text-content p {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-right: 40px;
+}
 }
 
 
