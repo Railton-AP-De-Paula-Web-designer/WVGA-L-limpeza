@@ -2009,58 +2009,92 @@ main {
 /*arrumando comfrito*/
 /* 🔥 CORREÇÃO REAL DO BUG (ESCORPIÃO FORA DO LUGAR) */
 
-.ameaca-info {
-    display: flex !important;
-    align-items: center !important;
-    gap: 20px !important;
-    padding: 15px !important;
-    overflow: hidden !important;
-}
-
-.ameaca-imagem {
-    flex: 0 0 120px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-
-    position: relative !important; /* 🔥 mata bug antigo */
-}
-
-.imgperigo {
-    width: 100% !important;
-    max-width: 120px !important;
-    height: auto !important;
-
-    position: relative !important; /* 🔥 REMOVE comportamento bugado */
-    top: 0 !important;
-    left: 0 !important;
-
-    margin: 0 auto !important;
-    object-fit: contain !important;
-}
-
-.ameaca-texto {
-    flex: 1 !important;
-    padding-left: 10px !important;
-}
 
 
 
+
+
+    /* ==========================================================================
+       SEÇÃO: DETALHES DAS AMEAÇAS (Refatorado para Separação Máxima)
+       ========================================================================== */
+
+    /* 1. Mantemos a estrutura do container pai limpa */
+    .detalhes-ameacas {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+        padding: 0 20px !important; /* Respiro lateral */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. O Card individual (Flexbox Padronizado) */
+    .ameaca-info {
+        display: flex !important;
+        flex-direction: row !important; /* Mantém lado a lado */
+        align-items: center !important; /* Alinhamento vertical central */
+        justify-content: space-between !important; /* Joga os elementos para as pontas */
+        width: 100% !important;
+        padding: 15px !important;
+        overflow: visible !important; /* Para não cortar o brilho */
+        position: relative !important;
+    }
+
+    /* 3. Lado da Imagem (Escorpião na Esquerda) */
     .ameaca-imagem {
-        flex: 0 0 90px !important;
+        width: 35% !important; /* Área fixa menor para o animal */
+        display: flex !important;
+        justify-content: flex-start !important; /* Mantém o escorpião na borda esquerda */
+        order: 1 !important; /* Força na esquerda */
+        margin: 0 !important;
+        position: static !important; /* Previne que absolute quebre o fluxo */
     }
 
     .imgperigo {
-        max-width: 90px !important;
+        max-width: 140px !important; /* Tamanho proporcional controlado */
         height: auto !important;
         object-fit: contain !important;
-
-        position: relative !important;
-        left: 0 !important;
-        transform: scale(1) !important;
+        filter: drop-shadow(0px 0px 10px rgba(255, 204, 0, 0.5));
     }
 
+    /* 4. Lado do Texto (Oposto à Imagem) */
+    .ameaca-texto {
+        width: 60% !important; /* Área maior para o texto rodar */
+        order: 2 !important; /* Força na direita */
+        padding-left: 20px !important; /* Espaço entre o animal e o texto */
+        padding-right: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        
+        /* === ESTA É A MUDANÇA PRINCIPAL === */
+        align-items: flex-end !important; /* Alinha o bloco inteiro na direita do container */
+        text-align: right !important;     /* Alinha as linhas de texto individualmente na direita */
+    }
+
+    /* 5. Ajustes de Tipografia e Títulos para Alinhamento à Direita */
+    .ameaca-texto h3 {
+        font-size: 1.35rem !important;
+        margin-bottom: 5px !important;
+        line-height: 1.2 !important;
+        width: 100% !important; /* Ocupa tudo para alinhar o texto */
+        
+    }
+
+    .ameaca-texto h4 {
+        font-size: 0.9rem !important;
+        color: rgba(255, 255, 255, 0.6) !important;
+        width: 100% !important;
+    }
+
+    .ameaca-texto p {
+        font-size: 0.95rem !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
+        max-width: 90% !important; /* Impede que o texto "tripa" verticalmente */
+    }
 }
+
+
 
 
 
